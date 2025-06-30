@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algoritmo basado en Juegos de Energía &mdash; TFG Paula Balbás Corbacho - Juegos de pago medio 1-07-2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=cdcc9ac1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Algoritmo de Zwick y Paterson" href="JuegosdePagoMedioZwickPaterson.html" />
+    <link rel="prev" title="Documentación del TFG de Paula Balbás Corbacho" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TFG Paula Balbás Corbacho - Juegos de pago medio
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algoritmo basado en Juegos de Energía</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1"><code class="docutils literal notranslate"><span class="pre">EnergyGameAlg1</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1.algoritmo1"><code class="docutils literal notranslate"><span class="pre">EnergyGameAlg1.algoritmo1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1.calc_MG"><code class="docutils literal notranslate"><span class="pre">EnergyGameAlg1.calc_MG()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1.estrategia"><code class="docutils literal notranslate"><span class="pre">EnergyGameAlg1.estrategia()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2"><code class="docutils literal notranslate"><span class="pre">MeanPayoffEnergyGameAlg2</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.algoritmo2"><code class="docutils literal notranslate"><span class="pre">MeanPayoffEnergyGameAlg2.algoritmo2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.calcular_a1_a2"><code class="docutils literal notranslate"><span class="pre">MeanPayoffEnergyGameAlg2.calcular_a1_a2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.gen_S"><code class="docutils literal notranslate"><span class="pre">MeanPayoffEnergyGameAlg2.gen_S()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.reponderar"><code class="docutils literal notranslate"><span class="pre">MeanPayoffEnergyGameAlg2.reponderar()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#JuegosdePagoMedioEnergia.Value"><code class="docutils literal notranslate"><span class="pre">Value</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#JuegosdePagoMedioEnergia.Value.is_top"><code class="docutils literal notranslate"><span class="pre">Value.is_top()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="JuegosdePagoMedioZwickPaterson.html">Algoritmo de Zwick y Paterson</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TFG Paula Balbás Corbacho - Juegos de pago medio</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Algoritmo basado en Juegos de Energía</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/JuegosdePagoMedioEnergia.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="algoritmo-basado-en-juegos-de-energia">
+<h1>Algoritmo basado en Juegos de Energía<a class="headerlink" href="#algoritmo-basado-en-juegos-de-energia" title="Link to this heading"></a></h1>
+<p>Algoritmo que resuelve juegos de pago medio utilizando el enfoque de <strong>juegos de energía</strong>. Donde se reescala el digrafo original de forma que, en cada iteración,
+el problema pase a ser uno de síntesis de estrategias. En cada reescalado, se computa un juego de energía para determinar si el valor del juego
+se manetiene no negativo para cada nodo.</p>
+<hr class="docutils" />
+<dl class="py class" id="module-JuegosdePagoMedioEnergia">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.EnergyGameAlg1">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">JuegosdePagoMedioEnergia.</span></span><span class="sig-name descname"><span class="pre">EnergyGameAlg1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arcos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Esta clase genera la jugada posicional óptima del jugador 1 del juego de pago medio mediante la resolución del juego de energía.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.EnergyGameAlg1.algoritmo1">
+<span class="sig-name descname"><span class="pre">algoritmo1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1.algoritmo1" title="Link to this definition"></a></dt>
+<dd><p>Esta función calcula y soluciona las incosistencias existentes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.EnergyGameAlg1.calc_MG">
+<span class="sig-name descname"><span class="pre">calc_MG</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1.calc_MG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.EnergyGameAlg1.estrategia">
+<span class="sig-name descname"><span class="pre">estrategia</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.EnergyGameAlg1.estrategia" title="Link to this definition"></a></dt>
+<dd><p>Una vez calculadas las inconsistencias, se calcula la estrategia óptima posicional de cada nodo del jugador 1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">JuegosdePagoMedioEnergia.</span></span><span class="sig-name descname"><span class="pre">MeanPayoffEnergyGameAlg2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arcos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Clase que resuelve el juego de pago medio en base a los juegos de energía mediante la clase anterior.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.algoritmo2">
+<span class="sig-name descname"><span class="pre">algoritmo2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frac1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frac2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">valores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estrategia_J1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estrategia_J2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arcos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.algoritmo2" title="Link to this definition"></a></dt>
+<dd><p>Función cuerpo del algortimo 2 que susa el 1 para el cálculo de los valores del juego y su respectiva estrategia.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.calcular_a1_a2">
+<span class="sig-name descname"><span class="pre">calcular_a1_a2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frac1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frac2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.calcular_a1_a2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.gen_S">
+<span class="sig-name descname"><span class="pre">gen_S</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.gen_S" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.reponderar">
+<span class="sig-name descname"><span class="pre">reponderar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invertir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arcos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.MeanPayoffEnergyGameAlg2.reponderar" title="Link to this definition"></a></dt>
+<dd><p>Función para reponderar los grafos y cambiar los conjuntos de vértices, si fuera necesario.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.Value">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">JuegosdePagoMedioEnergia.</span></span><span class="sig-name descname"><span class="pre">Value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MG</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.Value" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Esta clase satura los símbolos menos, menor y menor igual usando la cota MG que viene definida por el juego de energía.
+Además, hace que el ‘infinito’sea denotado por T.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="JuegosdePagoMedioEnergia.Value.is_top">
+<span class="sig-name descname"><span class="pre">is_top</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#JuegosdePagoMedioEnergia.Value.is_top" title="Link to this definition"></a></dt>
+<dd><p>Con esta función se puede comprobar si el valor es T o no.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentación del TFG de Paula Balbás Corbacho" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="JuegosdePagoMedioZwickPaterson.html" class="btn btn-neutral float-right" title="Algoritmo de Zwick y Paterson" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Paula Balbás Corbacho.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
