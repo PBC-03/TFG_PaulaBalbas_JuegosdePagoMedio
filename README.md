@@ -22,12 +22,12 @@ Por otro lado, las librerías utilizadas en este proyecto son parte de la biblio
 
 El repositorio, cuenta con las siguientes carpetas:
 ```
+README.md
 TFG_PaulaBalbas/
 |
 |-JuegosdePagoMedioZwickPaterson.py
 |-JuegosdePagoMedioEnergia.py
 |-Docs/
-|-README.md
 ```
 
 La carpeta `Docs` contiene la documentación generada con la librería `Sphinx`. No se detalla la estructura de sus elementos, ya que únicamente es necesario ejecutar el siguiente comando para visualizar la documentación:
