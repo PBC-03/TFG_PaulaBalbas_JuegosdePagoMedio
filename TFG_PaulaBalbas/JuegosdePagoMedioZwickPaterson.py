@@ -46,35 +46,6 @@ class MeanPayoffDiGraph:
                     n[i].append((j, w))
         self.matriz_ady = n
 
-    #Las siguientes dos funciones son auxiliares; disponibles para modificar el dígrafo de entrada y que se asemeje más a la realidad
-
-    def eliminar_nodos_aleatorios(self, porcentaje):
-        cantidad = int(len(self.nodos) * porcentaje)
-        if cantidad != 0:
-            nodos_eliminar = set(random.sample(self.nodos, cantidad))
-            self.nodos = [n for n in self.nodos if n not in nodos_eliminar]
-            self.nodo_ind = {n: i for i, n in enumerate(self.nodos)}
-            self.ind_nodo = {i: n for n, i in self.nodo_ind.items()}
-            self.n = len(self.nodos)
-            nueva_matriz = [[] for _ in range(self.n)]
-            nuevos_pesos = dict()
-            for (u, v), w in self.pesos.items():
-                if u in self.nodo_ind and v in self.nodo_ind:
-                    i, j = self.nodo_ind[u], self.nodo_ind[v]
-                    nueva_matriz[i].append((j, w))
-                    nuevos_pesos[(u, v)] = w
-            self.matriz_ady = nueva_matriz
-            self.pesos = nuevos_pesos
-    
-    def eliminar_arcos_aleatorias(self, porcentaje):
-        total_arcos = list(self.pesos.keys())
-        cantidad = int(len(total_arcos) * porcentaje)
-        if cantidad == 0:
-            return
-        a_eliminar = set(random.sample(total_arcos, cantidad))
-        self._eliminar_arcos(list(a_eliminar))
-        self.pesos = {k: w for k, w in self.pesos.items() if k not in a_eliminar}
-
 
 def racionalizar(valor_fraccion, n):
     """
