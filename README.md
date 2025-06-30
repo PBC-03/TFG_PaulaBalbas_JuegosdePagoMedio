@@ -2,7 +2,7 @@
 
 ## Modelado y estrategias algorítmicas para la toma de decisiones emdiante juegos de pago medio
 
-El trabajo de fin de grado desarrollado, versa sobre en el estudio de los juegos de pago medio, juegos de dos jugadores sobre grafos dirigidos que constituyen una solución ampliamente validada y utilizada en la resolución de problemas cotidianos.
+El trabajo de fin de grado desarrollado trata sobre el estudio de los juegos de pago medio, juegos de dos jugadores sobre grafos dirigidos que constituyen una solución ampliamente validada y utilizada en la resolución de problemas cotidianos.
 
 A lo largo de la memoria, no solo se analiza y explica la base teórica, sino que también se proponen una serie de algortimos que resuelven este tipo de casuísticas. Siendo, el presente repositorio, el lugar donde se publican los *scripts*, que se listan a continuación:
 
