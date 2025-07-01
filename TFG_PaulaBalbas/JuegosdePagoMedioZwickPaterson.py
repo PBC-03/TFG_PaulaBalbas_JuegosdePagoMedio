@@ -67,10 +67,17 @@ class AlgoritmoZwickPaterson:
         self.calcular_v()
 
     def _calc_k(self):
+        """
+        Cálculo del valor usado para la aproximación de los vlaores v_k.
+        k=n^^3 * 4 * W
+        """
         W = max(abs(w) for w in self.mpg.pesos.values())
         return 4 * (self.mpg.n ** 3) * W
 
     def calcular_vk(self):
+        """
+        Esta función calcula los valores v_k: valor total acumulado que un jugador puede garantizar desde un vértive v
+        """
         v = [0] * self.mpg.n
         for _ in range(self.k):
             v_temp = [0] * self.mpg.n
@@ -88,6 +95,9 @@ class AlgoritmoZwickPaterson:
         self.vk = v
 
     def calcular_v(self):
+        """
+        Esta función proporciona los valores aproximados por racionales del valor del juego para todo todos los vértices.
+        """
         n = self.mpg.n
         self.v = {
             self.mpg.ind_nodo[i]: racionalizar(Fraction(self.vk[i], self.k), n)
@@ -95,9 +105,15 @@ class AlgoritmoZwickPaterson:
         }
 
     def calc_v(self, nodo):
+        """
+        Función auxiliar que devuelve un valor concreto del juego para un nodo.
+        """
         return self.v.get(nodo, None)
 
     def aux(self, mpg_actual, nodo):
+        """
+        Cuerpo del algortimo. Dentro de este se actualizan las inconsistencias que existen hasta no quedar ninguna.
+        """
         #print(f"Nodo actual:", nodo)
         v = self.calc_v(nodo)
         i = mpg_actual.nodo_ind[nodo]

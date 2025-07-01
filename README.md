@@ -25,6 +25,7 @@ El repositorio, cuenta con las siguientes carpetas:
 README.md
 TFG_PaulaBalbas/
 |
+|-JuegosdePagoMedioEjemplo.py
 |-JuegosdePagoMedioZwickPaterson.py
 |-JuegosdePagoMedioEnergia.py
 |-Docs/
@@ -35,4 +36,20 @@ La carpeta `Docs` contiene la documentación generada con la librería `Sphinx`.
 start .\Docs\build\html\index.html
 ```
 Comando que debe ejecutarse en la terminal desde la raíz del proyecto.
+
+Por otro lado, en el código `JuegosdePagoMedio.py` quedan recogidos los algoritmos usados para ejemplificar los juegos de pago medio a lo largo del TFG.
+
+Cabe recalcar que, previo a la ejecución del ejemplo 4 (logística supermercado), se deben ajustar, si se desea:
+
+- Los parámetros a los que se quiera escalar
+- El porcentaje de nodos y arcos que se quiera eliminar
+
+Por otro lado, este código no cuenta con documentación *pyDoc*, al tratarse de ejemplos simples que austan los pesos de los nodos.
+
+No obstante, cada ejemplo debe incluir:
+
+- Una lista con los nodos de ejemplo. Que deben tener la forma 'estado.numerojugador'. Por ejemplo, un nodo asociado al jugador 1 con estado 'a', se denotará por 'a.1'
+- El conjunto de arcos con los pesos asociados. Cada arco tiene la forma ('nodo', 'nodo', peso), por ejemplo, ('a.1', 'b.2', 3).
+
+
 

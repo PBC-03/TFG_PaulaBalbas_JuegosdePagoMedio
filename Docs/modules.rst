@@ -6,3 +6,4 @@ TFG_PaulaBalbas
 
    JuegosdePagoMedioEnergia
    JuegosdePagoMedioZwickPaterson
+   JuegosdePagoMedioEjemplos

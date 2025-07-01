@@ -88,6 +88,9 @@ class EnergyGameAlg1:
         self.MG = self.calc_MG()
 
     def calc_MG(self):
+        """
+        Cáclulo del valor tope de las medidas de progreso de energía.
+        """
         return sum(max(-w, 0) for u in self.nodos for (_, w) in self.suc[u])
     
     def algoritmo1(self):
@@ -183,6 +186,9 @@ class MeanPayoffEnergyGameAlg2:
         self.V2 = V2
 
     def gen_S(self):
+        """
+        Genera el conjunto de fracciones donde se encunetrna los valores del juego.
+        """
         S=set()
         for m in range(1, len(self.nodos) + 1):
             for p in range(-m * self.W, m * self.W + 1):
@@ -190,6 +196,9 @@ class MeanPayoffEnergyGameAlg2:
         return sorted(S)
 
     def calcular_a1_a2(self, frac1, frac2):
+        """
+        Esta función genera los valores que se tomarán de umbral para cada subdigrafo generado en cada intervalo [frac1, frac2].
+        """
         a1_aux = set()
         a2_aux = set()
         for l in range(1, len(self.nodos)+1):
@@ -201,7 +210,7 @@ class MeanPayoffEnergyGameAlg2:
                 a1_aux.add(Fraction(q, l))
             for q in range(min_q2, max_q2 + 1):
                 a2_aux.add(Fraction(q, l))
-        #Si no se han añadido valores de a1 o a2, devuelvo el valor fraci
+        #Si no se han añadido valores de a1 o a2, devuelvo el valor frac 
         a1 = max(a1_aux) if a1_aux else frac1
         a2 = min(a2_aux) if a2_aux else frac2
         return a1, a2
@@ -241,7 +250,7 @@ class MeanPayoffEnergyGameAlg2:
 
         #Calculamos los límites de las particiones de S
         a1, a2 = self.calcular_a1_a2(frac1, frac2)
-        #print(f"Intervalo actual:[{a1},{a2}]")
+        #print(f"Intervalo actual:[{frac1},{frac2}] con a1={a1} y a2={a2}")
         
         #Añadimos esta condición para evitar recursiones infinitas
         if a1 == frac1 and a2 == frac2:
