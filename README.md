@@ -1,6 +1,6 @@
 # TFG Paula Balbás Corbacho: Juegos de pago medio
 
-## Modelado y estrategias algorítmicas para la toma de decisiones emdiante juegos de pago medio
+## Modelado y estrategias algorítmicas para la toma de decisiones mediante juegos de pago medio
 
 El Trabajo de Fin de Grado, TFG, desarrollado trata sobre el estudio de los juegos de pago medio, juegos de dos jugadores sobre grafos dirigidos que constituyen una solución ampliamente validada y utilizada en la resolución de problemas cotidianos.
 
